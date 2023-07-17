@@ -1,0 +1,8 @@
+﻿## Interface: 11302
+## Title: Classic Thrash Tracker
+## Notes: Thrash Tracker
+## Author: Idan (Idanqt-Discord)
+## Version: 0.7
+## SavedVariables: ThrashTrackerOptions
+
+ThrashTracker.lua
