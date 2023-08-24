@@ -1,8 +1,8 @@
-﻿## Interface: 11302
+## Interface: 11404
 ## Title: Classic Thrash Tracker
-## Notes: Thrash Tracker
-## Author: Idan (Idanqt-Discord)
-## Version: 0.7
+## Notes: tracks Thrash procs on mobs
+## Author: Idan (Idanqt-Discord) Jarjkem-HydraxianWaterlords
+## Version: 0.9.1
 ## SavedVariables: ThrashTrackerOptions
 
 ThrashTracker.lua
