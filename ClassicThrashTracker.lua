@@ -120,13 +120,11 @@ function ThrashTrackerPanels()
     panel.PlateXSlider:SetValue(ThrashTrackerOptions["nameplateXpos"])
     panel.PlateYSlider:SetValue(ThrashTrackerOptions["nameplateYpos"])
     panel.ThrashTextSlider:SetValue((ThrashTrackerOptions["ThrashTextScale"]*100))
-	print("I set ThrashTextScale to " .. ThrashTrackerOptions["ThrashTextScale"])
 
     _G["ThrashTrackerIconSizeSliderText"]:SetText("Icon Size ("..ThrashTrackerOptions["IconSize"]..")");
     _G["ThrashTrackerPlateXSliderText"]:SetText("Horizontal Position ("..ThrashTrackerOptions["nameplateXpos"]..")");
     _G["ThrashTrackerPlateYSliderText"]:SetText("Vertical Position ("..ThrashTrackerOptions["nameplateYpos"]..")");
     _G["ThrashTrackerThrashTextSliderText"]:SetText("Thrash Text Scale ("..(ThrashTrackerOptions["ThrashTextScale"]*100)..")");
-	print("I set ThrashTextScale to " .. ThrashTrackerOptions["ThrashTextScale"])
     _G["ThrashTrackerEditBoxButtonText"]:SetText("Edit Thrash Used Text");
 end
 
@@ -180,11 +178,8 @@ local function RemoveNameplateThrashIconAndText(unit)
 	local unitGUID = UnitGUID(unit)
 
     if nameplate then
-        print("passed nameplate if")
         if nameplate.icon then
-            print("passed nameplate.icon if")
             if (not thrashCount[unitGUID] or thrashCount[unitGUID] == activeThrash) then 
-                print("passed thrashCount if")
                 nameplate.icon:Hide()
                 nameplate.text:Hide()
                 nameplate.icon = nil
@@ -214,13 +209,11 @@ local function DisplayThrashText(unit)
 			nameplate.textFrame:SetAllPoints(nameplate)
 			nameplate.textFrame:SetPoint("BOTTOM", nameplate, "TOP", 0, -65)
 			nameplate.textFrame:SetText(ThrashTrackerOptions["ThrashText"])
-			print(ThrashTrackerOptions["ThrashTextScale"])
 			nameplate.textFrame:SetScale(ThrashTrackerOptions["ThrashTextScale"])
 			
             C_Timer.After(2, function()
                 nameplate.textFrame:Hide()
                 nameplate.textFrame = nil
-				print("2 Seconds Timer Expired: Hiding DisplayThrashText")
 				thrashCount[unitGUID] = nil
             end) 
         end
@@ -240,12 +233,10 @@ local function OnNameplateUnitAdded(unit)
     if nameplate.icon and not thrashCount[unitGUID] then
         nameplate.icon:Hide()
         nameplate.text:Hide()
-		print("removed modifications on UNIT_ADDED")
     end
 	
 	if nameplate.textFrame and not (thrashCount[unitGUID] == activeThrash) then
 		nameplate.textFrame:Hide()
-		print("removed textFrame modifications on UNIT_ADDED")
 	end
 
     if nameplate and thrashCount[unitGUID] then
@@ -270,7 +261,6 @@ local function OnNameplateUnitRemoved(unit)
                 nameplate.icon:Hide()
                 nameplate.text:Hide()
 				--nameplate.textFrame:Hide()
-				print("removed modifications on UNIT_REMOVED")
             end    
         end
     end
