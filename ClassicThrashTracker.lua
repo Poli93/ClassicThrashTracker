@@ -1,7 +1,7 @@
 --[[
 Idan Dayan (Idanqt-Discord) (Jarjkem-HydraxianWaterlords)
 
-Tracks and displays Thrash procs on creatures.
+Tracks and displays Thrash stacks on creatures.
     Findings from my research suggests that:
     -- Thrash can only stack up to 2.
     -- Thrash can proc off itself (like Windfury)
@@ -19,7 +19,7 @@ https://us.forums.blizzard.com/en/wow/t/wow-classic-era-%E2%80%9Cnot-a-bug%E2%80
     The Princess will store her attacks if kited and can land several attacks instantly when she catches up to her target. This behavior is consistent with the reference client
 
 --]]
-local addon, ThrashTracker = ... 
+local addon, ClassicThrashTracker = ... 
 local IDTHRSH_TEXT = "|cff69CCF0ThrashTracker|r: "
 local IDTHRSH_VERSION = "0.9.1"
 print(IDTHRSH_TEXT .. " Classic Thrash Tracker, version " .. IDTHRSH_VERSION)
