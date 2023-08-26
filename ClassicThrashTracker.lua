@@ -240,7 +240,7 @@ local function OnNameplateUnitAdded(unit)
 	end
 
     if nameplate and thrashCount[unitGUID] then
-        if (thrashCount[unitGUID] >= 1 or thrashCount[unitGUID] < 2) then 
+		if (thrashCount[unitGUID] >= 1 and thrashCount[unitGUID] < 2) then
             UpdateNameplateThrashIconAndText(unit, thrashCount[unitGUID])
         end
     end
