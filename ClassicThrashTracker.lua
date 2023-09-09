@@ -1,5 +1,5 @@
 --[[
-Idan Dayan (Idanqt-Discord) (Jarjkem-HydraxianWaterlords)
+Idan Dayan (Idanqt-Discord) (Jarjkem-HydraxianWaterlords) (Jarjkem-Stitches)
 
 Tracks and displays Thrash stacks on creatures.
     Findings from my research suggests that:
@@ -146,6 +146,7 @@ end
 
  local function UpdateNameplateThrashIconAndText(unit, count)
     if not unit then return end
+	if UnitIsPlayer(unit) then return end 
 
     local nameplate = C_NamePlate.GetNamePlateForUnit(unit)
     if nameplate:IsForbidden() then return end
@@ -193,6 +194,7 @@ local function DisplayThrashText(unit)
     if ThrashTrackerOptions["DisplayThrashTextShown"] == false then return end
 
     if not unit then return end
+	if UnitIsPlayer(unit) then return end 
 
     local unitGUID = UnitGUID(unit)
     if not unitGUID then return end
@@ -223,6 +225,7 @@ local function DisplayThrashText(unit)
 -- Event handler for NAME_PLATE_UNIT_ADDED
 local function OnNameplateUnitAdded(unit)
     if not unit then return end
+	if UnitIsPlayer(unit) then return end 
 
     local unitGUID = UnitGUID(unit)
     if not unitGUID then return end
@@ -312,14 +315,16 @@ local function OnCombatLogEventUnfiltered()
             for i, nameplate in ipairs(C_NamePlate.GetNamePlates()) do
                 unit = nameplate.namePlateUnitToken
                 guid = UnitGUID(unit)
-                if guid and guid == unitGUID and unit then 
-					if (thrashCount[unitGUID] >= 1 and thrashCount[unitGUID] <= 2) then
-                        UpdateNameplateThrashIconAndText(unit, thrashCount[unitGUID])
-                    end
-                    break
+                if guid and guid == unitGUID and unit then --and (UnitIsPlayer(unit) == nil) then 
+					if not UnitIsPlayer(unit) then
+						if (thrashCount[unitGUID] >= 1 and thrashCount[unitGUID] <= 2) then
+							UpdateNameplateThrashIconAndText(unit, thrashCount[unitGUID])
+						end
+						break
                 end
-            end
-        end 
+			end
+		end
+	end 
     elseif (subevent == "SWING_DAMAGE" or subevent == "SWING_MISSED" or subevent == "SWING_ABSORBED") then
         if sourceGUID then
 			if thrashCount[sourceGUID] and thrashCount[sourceGUID] >= 1 then
