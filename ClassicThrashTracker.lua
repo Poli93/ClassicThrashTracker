@@ -5,7 +5,7 @@ Displays Thrash stacks on creatures nameplates and a text message once the abili
 Findings from my testings suggest that:
 -- Thrash can only stack up to 2.
 -- Thrash can proc off itself (?)
--- Stores procs from past encounters. (outdoor world)
+-- Stores procs from past encounters. (outdoor world only)
 -- Cannot be cast while in CC. 
 -- Has 4 seconds internal cooldown. (according to wowhead)
 
