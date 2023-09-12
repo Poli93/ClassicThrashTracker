@@ -21,7 +21,7 @@ https://us.forums.blizzard.com/en/wow/t/wow-classic-era-%E2%80%9Cnot-a-bug%E2%80
 --]]
 local addon, ClassicThrashTracker = ... 
 local IDTHRSH_TEXT = "|cff69CCF0ThrashTracker|r: "
-local IDTHRSH_VERSION = "0.9.1"
+local IDTHRSH_VERSION = "0.9.4"
 print(IDTHRSH_TEXT .. " Classic Thrash Tracker, version " .. IDTHRSH_VERSION)
 local frame = CreateFrame("Frame")
 local thrashCount = {}
