@@ -1,6 +1,27 @@
 # Classic Thrash Tracker
 
-WoW Era Hardcore addon that displays Thrash stacks ontop of creature nameplates and a text message once the ability is used. 
+ /ctt or /tt to access ingame settings 
+
+Displays Thrash stacks on creatures nameplates and a text message once the ability is used.
+Findings from my testings suggest that:
+
+Thrash can only stack up to 2.
+Thrash can proc off itself (?)
+Stores procs from past encounters. (outdoor world only)
+Cannot be cast while in CC.
+Has 4 seconds internal cooldown. (according to wowhead)
+
+other Thrash alike abilities in the game:
+
+https://www.wowhead.com/classic/spells?filter=109;19;0
+
+ 
+https://us.forums.blizzard.com/en/wow/t/wow-classic-era-%E2%80%9Cnot-a-bug%E2%80%9D-list-updated-april-22-2021/175887
+
+* Some monsters have a “Thrash” mechanic and can proc multiple attacks against players in a very short duration.
+Note: Most of these monsters can also “store” these procs and unleash them all several seconds later.
+An example of this is the Princess Theradras encounter in Maraudon.
+The Princess will store her attacks if kited and can land several attacks instantly when she catches up to her target. This behavior is consistent with the reference client
 
 ![image](https://github.com/Poli93/ClassicThrashTracker/assets/965110/539ea7d4-0111-4c4c-8074-73eb0eb431e9)
 
