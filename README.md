@@ -1,6 +1,7 @@
 # Classic Thrash Tracker
 
  /ctt or /tt to access ingame settings 
+ 
 
 Displays Thrash stacks on creatures nameplates and a text message once the ability is used.
 Findings from my testings suggest that:
