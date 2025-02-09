@@ -9,7 +9,7 @@ Findings from my testings suggest that:
 * Thrash can only stack up to 2.
 * Stores procs until instance/server reset
 * Cannot be cast while in CC.
-* Has 4 seconds internal cooldown. (according to wowhead)
+* Has a cooldown of 4 seconds.
 
 other Thrash alike abilities in the game:
 
