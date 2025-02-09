@@ -1,5 +1,7 @@
 # Classic Thrash Tracker
 
+_**For in-depth information about creature extra attacks see ([Extra Attacks Research](https://github.com/Poli93/WoW-Extra-Attacks-Research/)) .**_
+
  /ctt or /tt to access ingame settings 
  
 
